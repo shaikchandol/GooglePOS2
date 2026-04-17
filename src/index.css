@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+  --font-serif: "Georgia", serif;
+  
+  --color-bg: #E4E3E0;
+  --color-ink: #141414;
+  --color-line: #141414;
+  --color-accent: #2A5DBC;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  @apply text-[13px];
+}
+
+/* Mermaid Custom Styles for High Density */
+.mermaid svg {
+  @apply max-w-full h-auto mx-auto border-none;
+  background: transparent !important;
+}
+
+.mermaid .node rect, .mermaid .node polygon, .mermaid .node circle, .mermaid .node ellipse, .mermaid .node path {
+  fill: #FFF !important;
+  stroke: var(--color-line) !important;
+  stroke-width: 1px !important;
+}
+
+.mermaid .label {
+  color: var(--color-ink) !important;
+  font-family: var(--font-sans) !important;
+  font-size: 11px !important;
+}
+
+.mermaid .edgeLabel {
+  background-color: #F0EFEA !important;
+  color: #666 !important;
+  font-size: 10px !important;
+  padding: 2px 4px !important;
+  border-radius: 2px !important;
+  border: 1px solid var(--color-line) !important;
+}
+
+.mermaid .edgePath path {
+  stroke: var(--color-line) !important;
+  stroke-width: 1.5px !important;
+}
+
+/* Markdown prose styling */
+.markdown-body {
+  @apply text-gray-800 leading-relaxed;
+}
+
+.markdown-body h3 {
+  @apply text-ink font-bold mt-6 mb-4 text-lg tracking-tight;
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+.markdown-body h4 {
+  @apply text-accent font-bold mt-4 mb-2 text-xs uppercase tracking-widest;
+  font-family: var(--font-mono);
+}
+
+.markdown-body blockquote {
+  @apply border-l-4 border-accent/50 bg-white p-4 my-4 italic text-gray-600 border;
+}
+
+.markdown-body ul {
+  @apply list-disc list-inside space-y-1 my-4;
+}
+
+.markdown-body code {
+  @apply bg-white border border-gray-300 px-1 py-0.5 rounded font-mono text-accent text-xs;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Modular Monolith POS Architect",
+  "description": "Blueprint and architecture guide for building cloud-agnostic .NET modular monoliths for retail POS with multi-tenancy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
